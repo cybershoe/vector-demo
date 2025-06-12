@@ -26,6 +26,7 @@ def genAggregation(vector: list[float]) -> list:
         }, {
             '$project': { 
                 'id': { "$toString": '$_id' },
+                '_id': 0,
                 'plot': 1, 
                 'title': 1, 
                 'score': {
