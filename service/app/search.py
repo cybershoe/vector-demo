@@ -42,6 +42,7 @@ async def searchVector(vector: list[float]) -> list:
     return results
 
 async def searchMovie(id: str) -> dict:
+    log.info(f'Searching for movie with id: {id}')
     cursor = collection.find({'_id': ObjectId(id)}, {'_id': 0, 'plot_embedding': 0})
     results = await cursor.to_list()
     if len(results) == 0:

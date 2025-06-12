@@ -82,3 +82,27 @@ button:disabled {
 .search-item p {
   font-size: small;
 }
+
+.movieDetails {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: fit-content;
+  max-width: 85vw;
+  max-height: 85vh;
+  height: fit-content;
+  overflow: auto;
+  padding: 20;
+  z-index: 30;
+  background-color: whitesmoke;
+  box-shadow: 1 1 3 1;
+  border-radius: 20;
+  display: flex;
+}
+
+.movieDetails pre{
+  white-space: pre-wrap;
+}
