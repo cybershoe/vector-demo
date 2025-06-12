@@ -19,6 +19,8 @@ export function App() {
 
   const handleGenerateEmbeddings = () => {
     if (searchTerm) {
+      setEmbeddings([]); // Clear previous embeddings
+      setSearchResults([]); // Clear previous search results
       generateEmbeddings(searchTerm, (embeddings) => {
         setEmbeddings(embeddings);
       });
@@ -74,7 +76,6 @@ export function App() {
               getMovie(e.id, (r) => setMovieDetails(r))}}>
               <h4>{e.title}</h4>
               <p>{e.plot}</p>
-              <p>{e.id}</p>
               <p><strong>Score:</strong> {e.score}</p>
             </div>
           );
