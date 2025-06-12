@@ -7,7 +7,7 @@ from logging import getLogger
 from embed import embedString
 from search import searchVector, searchMovie
 
-origins = loads(getenv('CORS_ORIGINS', '["http://localhost"]'))
+origins = loads(getenv('CORS_ORIGINS', '["http://localhost", "http://localhost:1234", "http://127.0.0.1", "http://127.0.0.1:1234"]'))
 
 log = getLogger('uvicorn')
 

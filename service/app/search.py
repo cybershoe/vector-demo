@@ -6,9 +6,8 @@ from bson import json_util, ObjectId
 log = getLogger('uvicorn')
 
 uri = getenv('MONGODB_URI')
-client = AsyncMongoClient(uri,
-                     tls=True,
-                     tlsCertificateKeyFile=getenv('MONGODB_PEM', './keys/mongo.pem'))
+client = AsyncMongoClient(uri)
+
 db = client[getenv('DB_NAME', 'sample_mflix')]
 collection = db[getenv('COLLECTION_NAME', 'embedded_movies')]
 

@@ -7,8 +7,6 @@ log = getLogger('uvicorn')
 client = OpenAI(api_key=getenv('OPENAI_API_KEY'))
 model = getenv('OPENAI_MODEL', 'text-embedding-ada-002')
 
-
-
 def embedString(text: str) -> list[float]:
 
     try:
