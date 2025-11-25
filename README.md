@@ -2,7 +2,7 @@
 
 ## Prerequisites:
 
-- MongoDB cluster with ```sample_mflix``` sample dataset loaded
+- MongoDB cluster with [```sample_mflix```](https://huggingface.co/datasets/MongoDB/embedded_movies) sample dataset loaded
 - An OpenAI API key with available credits
 - Python
 - npm/npx
